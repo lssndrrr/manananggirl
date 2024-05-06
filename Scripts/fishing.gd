@@ -16,6 +16,7 @@ var fish = preload("res://Scenes/Fish.tscn")
 	#$Settings/DecelerationValue.text = str(hookDeceleration)
 
 func _ready():
+	fishable = true;
 	spawn_easy()
 	## Set Initial Variables
 	#update_labels()

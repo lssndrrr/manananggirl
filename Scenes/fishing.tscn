@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7y6mdednuh3e"]
 
 [ext_resource type="Script" path="res://Scripts/fishing.gd" id="1_5ewkl"]
-[ext_resource type="Texture2D" uid="uid://cqit62e8u7id4" path="res://Assets/horizontal/Progress-Empty-h.png" id="1_53kxm"]
-[ext_resource type="Texture2D" uid="uid://c4wvq0btx5hoe" path="res://Assets/horizontal/Progress-Bar-h.png" id="2_wvrjc"]
-[ext_resource type="Texture2D" uid="uid://ds0vnppiwamms" path="res://Assets/horizontal/Fishing-Column-h.png" id="3_3vf1s"]
-[ext_resource type="Texture2D" uid="uid://d3i1b0nsx55jn" path="res://Assets/horizontal/Hook-h.png" id="4_ynci1"]
+[ext_resource type="Texture2D" uid="uid://dv0rg51ls4hdb" path="res://horizontal/Progress-Empty-h.png" id="1_53kxm"]
+[ext_resource type="Texture2D" uid="uid://h1qti6i7fmhw" path="res://horizontal/Progress-Bar-h.png" id="2_wvrjc"]
+[ext_resource type="Texture2D" uid="uid://ch1qt5u0cmm22" path="res://horizontal/Fishing-Column-h.png" id="3_3vf1s"]
+[ext_resource type="Texture2D" uid="uid://xd32j8yynah3" path="res://horizontal/Hook-h.png" id="4_ynci1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hs7p2"]
 size = Vector2(38, 16)
@@ -21,6 +21,7 @@ texture_under = ExtResource("1_53kxm")
 texture_progress = ExtResource("2_wvrjc")
 
 [node name="FishingColumn" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(325.5, 32)
 texture = ExtResource("3_3vf1s")
 
@@ -37,9 +38,9 @@ position = Vector2(204.5, 32)
 shape = SubResource("RectangleShape2D_hs7p2")
 
 [node name="Clicker" type="TextureButton" parent="."]
-offset_left = -43.0
-offset_top = -33.0
-offset_right = 966.0
-offset_bottom = 454.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 639.0
+offset_bottom = 322.0
 
 [connection signal="button_down" from="Clicker" to="." method="_on_clicker_button_down"]
