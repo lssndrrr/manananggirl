@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://duqv77k8mplao"]
+
+[ext_resource type="PackedScene" uid="uid://ds7nfbx15e463" path="res://Scenes/Player.tscn" id="1_4so8e"]
+[ext_resource type="Script" path="res://Scripts/Night3.gd" id="1_218dw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6igb0"]
+size = Vector2(242, 316)
+
+[node name="Night3" type="Node2D"]
+script = ExtResource("1_218dw")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_4so8e")]
+position = Vector2(314, 191)
+scale = Vector2(0.15, 0.15)
+
+[node name="Night3_trans" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Night3_trans"]
+position = Vector2(760, 148)
+shape = SubResource("RectangleShape2D_6igb0")
+
+[connection signal="body_entered" from="Night3_trans" to="." method="_on_night_3_trans_body_entered"]
+[connection signal="body_exited" from="Night3_trans" to="." method="_on_night_3_trans_body_exited"]

@@ -1,21 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://dycsn37rfj12d"]
 
-[ext_resource type="Script" path="res://Scripts/Fish.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://chlugalldabvk" path="res://horizontal/Fish-h.png" id="2_wmh2r"]
+[ext_resource type="Script" path="res://Scripts/Fish.gd" id="1_3mcxa"]
+[ext_resource type="Texture2D" uid="uid://bthvqhyxvf4oe" path="res://Assets/Fish.png" id="2_e2ce1"]
 
 [node name="Fish" type="Node2D"]
-z_index = 3
-script = ExtResource("2")
+script = ExtResource("1_3mcxa")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(205, 32)
 polygon = PackedVector2Array(0.0333195, 5.40162, 5.26929, 0.0812044, 0.0333195, -5.22232, -5.13509, 0.0305338)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_wmh2r")
-offset = Vector2(204.5, 32)
+texture = ExtResource("2_e2ce1")
 
 [node name="MoveTimer" type="Timer" parent="."]
 
