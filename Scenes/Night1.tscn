@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://xof7ksjiptuh"]
+
+[ext_resource type="Script" path="res://Scripts/Night1.gd" id="1_03l37"]
+[ext_resource type="PackedScene" uid="uid://ds7nfbx15e463" path="res://Scenes/Player.tscn" id="2_d1hy3"]
+[ext_resource type="PackedScene" uid="uid://dl54bxxqcb5ji" path="res://Scenes/scene1.tscn" id="2_rmap2"]
+[ext_resource type="PackedScene" uid="uid://b3yujb5wks88r" path="res://Scenes/Interaction/InteractionArea.tscn" id="5_7ivni"]
+[ext_resource type="PackedScene" uid="uid://brg8rjpm24cv2" path="res://Scenes/SceneTrigger.tscn" id="6_or28p"]
+[ext_resource type="PackedScene" uid="uid://bph87jrx45vnr" path="res://Scenes/HUD.tscn" id="7_osxpf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fupd7"]
+size = Vector2(399, 267)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwo3g"]
+size = Vector2(56, 549)
+
+[node name="Night1" type="Node2D"]
+script = ExtResource("1_03l37")
+
+[node name="TileMap" parent="." instance=ExtResource("2_rmap2")]
+position = Vector2(-10, -20)
+
+[node name="Player" parent="." instance=ExtResource("2_d1hy3")]
+position = Vector2(60, 85.34)
+scale = Vector2(0.15, 0.15)
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+position = Vector2(14, 21)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PackedVector2Array(-1, -5, 1315, -8, 1314, 539, 18, 535, -12, -7, -61, -68, -93, 650, 1441, 643, 1403, -96, -29, -81, -21, -30, -16, -18)
+
+[node name="InteractionArea" parent="." instance=ExtResource("5_7ivni")]
+position = Vector2(695, 133)
+action_name = "fish a baby"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(210, 28.5)
+shape = SubResource("RectangleShape2D_fupd7")
+debug_color = Color(0.89086, 0.30824, 0.272561, 0.42)
+
+[node name="SceneTrigger" parent="." instance=ExtResource("6_or28p")]
+position = Vector2(1257, 162)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
+z_index = 5
+position = Vector2(49, 128.5)
+shape = SubResource("RectangleShape2D_iwo3g")
+
+[node name="HUD" parent="." instance=ExtResource("7_osxpf")]
+offset = Vector2(15, 15)
+scale = Vector2(0.675, 0.675)
+transform = Transform2D(0.675, 0, 0, 0.675, 15, 15)
