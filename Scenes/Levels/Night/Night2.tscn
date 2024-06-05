@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b753wk6b6nrv1"]
+
+[ext_resource type="PackedScene" uid="uid://ds7nfbx15e463" path="res://Scenes/Player.tscn" id="1_bsesv"]
+[ext_resource type="Script" path="res://Scripts/Levels/Night/Night2.gd" id="1_ngipk"]
+[ext_resource type="PackedScene" uid="uid://bph87jrx45vnr" path="res://Scenes/HUD.tscn" id="3_iul08"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3lfw"]
+size = Vector2(153, 511)
+
+[node name="Night2" type="Node2D"]
+script = ExtResource("1_ngipk")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_bsesv")]
+position = Vector2(205, 186)
+scale = Vector2(0.15, 0.15)
+
+[node name="Night2_trans" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Night2_trans"]
+position = Vector2(719.5, 256.5)
+shape = SubResource("RectangleShape2D_w3lfw")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 143.0
+offset_top = 63.0
+offset_right = 562.0
+offset_bottom = 160.0
+text = "NIGHT 2"
+
+[node name="HUD" parent="." instance=ExtResource("3_iul08")]
+
+[connection signal="body_entered" from="Night2_trans" to="." method="_on_night_2_trans_body_entered"]
+[connection signal="body_exited" from="Night2_trans" to="." method="_on_night_2_trans_body_exited"]

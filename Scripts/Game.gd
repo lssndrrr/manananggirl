@@ -30,7 +30,9 @@ func _ready():
 	#update_labels()
 
 func _process(delta):
+
 	if ($Clicker.button_pressed == true || Input.is_action_just_pressed("ui_accept")):
+
 		if hookVelocity > -maxVelocity:
 			hookVelocity -= hookAcceleration
 	else:
@@ -67,10 +69,12 @@ func caught_fish():
 	#$MessageTimer.start()
 	$Progress.value = 0
 	fishable = true
+
 	Global.add_score()
 	Global.fished = true
 	destroy()
 	
+
 	
 func lost_fish():
 	get_node("Fish").destroy()
@@ -93,10 +97,12 @@ func add_fish(min_d, max_d, move_speed, move_time):
 	add_child(f)
 	$Progress.value = 200
 	fishable = false
+
 	
 func destroy():
 	get_parent().remove_child(self)
 	queue_free()
+
 
 #func _on_IncreaseSpeed_pressed():
 	#maxVelocity += .5

@@ -1,0 +1,302 @@
+[gd_scene load_steps=14 format=3 uid="uid://cng3fkke17b0e"]
+
+[ext_resource type="Texture2D" uid="uid://c6b301hes6g3f" path="res://Assets/Fishing-Column.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cjt3wcclhn2u6" path="res://Assets/Progress-Empty.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://v7hqm7frol1x" path="res://Assets/Progress-Bar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://yrhk4amsgy7h" path="res://Assets/Hook.png" id="4"]
+[ext_resource type="Script" path="res://Game.gd" id="5"]
+[ext_resource type="PackedScene" path="res://Button.tscn" id="6"]
+[ext_resource type="FontFile" uid="uid://banlif7ihejtp" path="res://Assets/Nunito/Nunito-SemiBold.ttf" id="7"]
+[ext_resource type="Texture2D" uid="uid://bu4j18wa6hdy4" path="res://Assets/Plus.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ct8dnjbnmwigh" path="res://Assets/minus.png" id="9"]
+[ext_resource type="FontFile" path="res://Assets/font.tres" id="10"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(13.5985, 37.9946)
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("7")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("7")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("5")
+
+[node name="Progress" type="TextureProgressBar" parent="."]
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 186.0
+offset_bottom = 301.0
+max_value = 1000.0
+page = 1.0
+fill_mode = 3
+texture_under = ExtResource("2")
+texture_progress = ExtResource("3")
+
+[node name="FishingColumn" type="Sprite2D" parent="."]
+position = Vector2(161.331, 158.597)
+texture = ExtResource("1")
+
+[node name="Hook" type="Node2D" parent="."]
+position = Vector2(161.436, 279.102)
+
+[node name="Sprite2D" type="Sprite2D" parent="Hook"]
+texture = ExtResource("4")
+
+[node name="Area2D" type="Area2D" parent="Hook"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hook/Area2D"]
+shape = SubResource("1")
+
+[node name="Clicker" type="TextureButton" parent="."]
+offset_left = -3.54941
+offset_right = 638.451
+offset_bottom = 319.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 225.807
+offset_top = 55.9204
+offset_right = 306.807
+offset_bottom = 246.92
+
+[node name="Button" parent="GridContainer" instance=ExtResource("6")]
+layout_mode = 2
+focus_mode = 0
+type = "Easy"
+
+[node name="Button2" parent="GridContainer" instance=ExtResource("6")]
+layout_mode = 2
+focus_mode = 0
+type = "Medium"
+
+[node name="Button3" parent="GridContainer" instance=ExtResource("6")]
+layout_mode = 2
+focus_mode = 0
+type = "Hard"
+
+[node name="Button4" parent="GridContainer" instance=ExtResource("6")]
+layout_mode = 2
+focus_mode = 0
+type = "Impossible"
+
+[node name="Button5" parent="GridContainer" instance=ExtResource("6")]
+layout_mode = 2
+focus_mode = 0
+type = "Seriously"
+
+[node name="Message" type="Label" parent="."]
+offset_left = 11.2327
+offset_top = 111.92
+offset_right = 140.233
+offset_bottom = 160.92
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 218.97
+offset_top = 16.097
+offset_right = 313.97
+offset_bottom = 50.097
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("3")
+text = "Spawn Fish"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 225.807
+offset_top = 265.148
+offset_right = 566.807
+offset_bottom = 299.148
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("3")
+text = "Click or tap anywhere else to raise the hook"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 363.462
+offset_top = 16.097
+offset_right = 475.462
+offset_bottom = 50.097
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("3")
+text = "Hook Settings"
+
+[node name="Settings" type="Node2D" parent="."]
+position = Vector2(412.933, 55.9204)
+
+[node name="IncreaseSpeed" type="TextureButton" parent="Settings"]
+offset_left = 18.0094
+offset_top = 0.823402
+offset_right = 35.0094
+offset_bottom = 17.8234
+focus_mode = 0
+texture_normal = ExtResource("8")
+
+[node name="DecreaseSpeed" type="TextureButton" parent="Settings"]
+offset_left = -35.9625
+offset_top = 0.823402
+offset_right = -18.9625
+offset_bottom = 17.8234
+focus_mode = 0
+texture_normal = ExtResource("9")
+
+[node name="IncreaseAcceleration" type="TextureButton" parent="Settings"]
+offset_left = 18.0094
+offset_top = 39.0
+offset_right = 35.0094
+offset_bottom = 56.0
+focus_mode = 0
+texture_normal = ExtResource("8")
+
+[node name="DecreaseAcceleration" type="TextureButton" parent="Settings"]
+offset_left = -35.9625
+offset_top = 39.0
+offset_right = -18.9625
+offset_bottom = 56.0
+focus_mode = 0
+texture_normal = ExtResource("9")
+
+[node name="IncreaseDeceleration" type="TextureButton" parent="Settings"]
+offset_left = 18.0094
+offset_top = 78.0
+offset_right = 35.0094
+offset_bottom = 95.0
+focus_mode = 0
+texture_normal = ExtResource("8")
+
+[node name="DecreaseDeceleration" type="TextureButton" parent="Settings"]
+offset_left = -35.9625
+offset_top = 78.0
+offset_right = -18.9625
+offset_bottom = 95.0
+focus_mode = 0
+texture_normal = ExtResource("9")
+
+[node name="IncreaseBounce" type="TextureButton" parent="Settings"]
+offset_left = 18.0094
+offset_top = 117.0
+offset_right = 35.0094
+offset_bottom = 134.0
+focus_mode = 0
+texture_normal = ExtResource("8")
+
+[node name="DecreaseBounce" type="TextureButton" parent="Settings"]
+offset_left = -35.9625
+offset_top = 117.0
+offset_right = -18.9625
+offset_bottom = 134.0
+focus_mode = 0
+texture_normal = ExtResource("9")
+
+[node name="SpeedLabel" type="Label" parent="Settings"]
+offset_left = 58.9712
+offset_right = 99.9712
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "Speed"
+
+[node name="AccelerationLabel" type="Label" parent="Settings"]
+offset_left = 58.9712
+offset_top = 37.6284
+offset_right = 139.971
+offset_bottom = 57.6284
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "Acceleration"
+
+[node name="DecelerationLabel" type="Label" parent="Settings"]
+offset_left = 58.9712
+offset_top = 75.8486
+offset_right = 186.971
+offset_bottom = 95.8486
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "Falling Acceleration"
+
+[node name="BounceLabel" type="Label" parent="Settings"]
+offset_left = 59.0
+offset_top = 115.0
+offset_right = 108.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "Bounce"
+
+[node name="SpeedValue" type="Label" parent="Settings"]
+offset_left = -14.0
+offset_right = 12.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "2"
+
+[node name="AccelerationValue" type="Label" parent="Settings"]
+offset_left = -14.0
+offset_top = 37.6284
+offset_right = 12.0
+offset_bottom = 57.6284
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "2"
+
+[node name="DecelerationValue" type="Label" parent="Settings"]
+offset_left = -14.0
+offset_top = 75.8486
+offset_right = 12.0
+offset_bottom = 95.8486
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "2"
+
+[node name="BounceValue" type="Label" parent="Settings"]
+offset_left = -14.0
+offset_top = 115.0
+offset_right = 12.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10")
+text = "2"
+
+[node name="Button" parent="Settings" instance=ExtResource("6")]
+anchors_preset = 15
+offset_left = -40.435
+offset_top = 156.0
+offset_right = 40.565
+offset_bottom = 191.0
+type = "Reset"
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[connection signal="button_down" from="Clicker" to="." method="_on_Clicker_button_down"]
+[connection signal="pressed" from="Clicker" to="." method="_on_Clicker_pressed"]
+[connection signal="pressed" from="GridContainer/Button" to="." method="spawn_easy"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="spawn_medium"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="spawn_hard"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="spawn_impossible"]
+[connection signal="pressed" from="GridContainer/Button5" to="." method="spawn_seriously"]
+[connection signal="pressed" from="Settings/IncreaseSpeed" to="." method="_on_IncreaseSpeed_pressed"]
+[connection signal="pressed" from="Settings/DecreaseSpeed" to="." method="_on_DecreaseSpeed_pressed"]
+[connection signal="pressed" from="Settings/IncreaseAcceleration" to="." method="_on_IncreaseAcceleration_pressed"]
+[connection signal="pressed" from="Settings/DecreaseAcceleration" to="." method="_on_DecreaseAcceleration_pressed"]
+[connection signal="pressed" from="Settings/IncreaseDeceleration" to="." method="_on_IncreaseDeceleration_pressed"]
+[connection signal="pressed" from="Settings/DecreaseDeceleration" to="." method="_on_DecreaseDeceleration_pressed"]
+[connection signal="pressed" from="Settings/IncreaseBounce" to="." method="_on_IncreaseBounce_pressed"]
+[connection signal="pressed" from="Settings/DecreaseBounce" to="." method="_on_DecreaseBounce_pressed"]
+[connection signal="pressed" from="Settings/Button" to="." method="reset_settings"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]

@@ -35,6 +35,6 @@ func move(target):
 func destroy():
 	get_parent().remove_child(self)
 	queue_free()
-	
+
 func timeout():
 	plan_move()

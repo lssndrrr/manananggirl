@@ -7,6 +7,7 @@ var left = 0
 var right = 1
 
 @onready var sprite2D = $AnimatedSprite2D
+
 var animate = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -45,13 +46,14 @@ func _physics_process(_delta):
 		sprite2D.play("eat")
 		sprite2D.scale = Vector2(2, 2)
 
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(3.3).timeout
 				
 		animate = false
 		Global.finished = true
 		sprite2D.scale = Vector2(1, 1)
 		sprite2D.play("fly")
 		
+
 func player():
 	pass
 
