@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cng3fkke17b0e"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_dxeyc"]
-[ext_resource type="Texture2D" uid="uid://cjt3wcclhn2u6" path="res://Assets/Fishing/Progress-Empty.png" id="2_yqlh3"]
-[ext_resource type="Texture2D" uid="uid://v7hqm7frol1x" path="res://Assets/Fishing/Progress-Bar.png" id="3_d3g5q"]
-[ext_resource type="Texture2D" uid="uid://c6b301hes6g3f" path="res://Assets/Fishing/Fishing-Column.png" id="4_diwo4"]
-[ext_resource type="Texture2D" uid="uid://yrhk4amsgy7h" path="res://Assets/Fishing/Hook.png" id="5_d3dt7"]
+[ext_resource type="Texture2D" uid="uid://cjt3wcclhn2u6" path="res://Assets/Progress-Empty.png" id="2_yqlh3"]
+[ext_resource type="Texture2D" uid="uid://v7hqm7frol1x" path="res://Assets/Progress-Bar.png" id="3_d3g5q"]
+[ext_resource type="Texture2D" uid="uid://c6b301hes6g3f" path="res://Assets/Fishing-Column.png" id="4_diwo4"]
+[ext_resource type="Texture2D" uid="uid://yrhk4amsgy7h" path="res://Assets/Hook.png" id="5_d3dt7"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(13.5985, 37.9946)

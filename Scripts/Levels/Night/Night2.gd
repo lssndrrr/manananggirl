@@ -2,9 +2,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	#$Player.position.x = Global.player_start_posX
-	#$Player.position.y = Global.player_start_posY
+	$Player.position.x = Global.player_start_posX
+	$Player.position.y = Global.player_start_posY
+	#interaction_area.interact = Callable(self, "_on_interact")
+	Global.fished = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

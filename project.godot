@@ -25,7 +25,6 @@ InteractionManager="*res://Scenes/Interaction/InteractionManager.tscn"
 window/size/viewport_width=640
 window/size/viewport_height=320
 window/size/mode=2
-window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=640
 window/stretch/mode="2d"

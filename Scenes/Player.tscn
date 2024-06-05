@@ -1,17 +1,17 @@
 [gd_scene load_steps=76 format=3 uid="uid://ds7nfbx15e463"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4cc48"]
-[ext_resource type="Texture2D" uid="uid://buerc5c8id4ui" path="res://Assets/Character Fly/7a58f2e4-da7d-4b00-a82f-98e2b848d275.png" id="1_y4dog"]
-[ext_resource type="Texture2D" uid="uid://df08p8k2stocw" path="res://Assets/Character Fly/021387b7-0c8d-4f08-934c-cc81d15c44e1.png" id="2_h2fqg"]
+[ext_resource type="Texture2D" uid="uid://buerc5c8id4ui" path="res://Assets/fly/7a58f2e4-da7d-4b00-a82f-98e2b848d275.png" id="1_y4dog"]
+[ext_resource type="Texture2D" uid="uid://df08p8k2stocw" path="res://Assets/fly/021387b7-0c8d-4f08-934c-cc81d15c44e1.png" id="2_h2fqg"]
 [ext_resource type="Texture2D" uid="uid://drf8wgref256d" path="res://Assets/Eat/frame_00_delay-0.1s.png" id="2_u4o3x"]
-[ext_resource type="Texture2D" uid="uid://dqpncr15p3cch" path="res://Assets/Character Fly/72929396-4daf-492e-8369-0391715b45f9.png" id="3_car72"]
+[ext_resource type="Texture2D" uid="uid://dqpncr15p3cch" path="res://Assets/fly/72929396-4daf-492e-8369-0391715b45f9.png" id="3_car72"]
 [ext_resource type="Texture2D" uid="uid://dgrsntrlbehqn" path="res://Assets/Eat/frame_01_delay-0.1s.png" id="3_rx04w"]
 [ext_resource type="Texture2D" uid="uid://d0xsfgwsyr4pr" path="res://Assets/Eat/frame_02_delay-0.1s.png" id="4_8doxk"]
-[ext_resource type="Texture2D" uid="uid://dwqemnyf4x67o" path="res://Assets/Character Fly/b241c40a-5326-4122-bfad-9dff76effe05.png" id="4_y31d1"]
-[ext_resource type="Texture2D" uid="uid://cpyasu4pb4whh" path="res://Assets/Character Fly/ca5bd7b3-a02f-4edc-b0fc-2b47e0934260.png" id="5_78n6q"]
+[ext_resource type="Texture2D" uid="uid://dwqemnyf4x67o" path="res://Assets/fly/b241c40a-5326-4122-bfad-9dff76effe05.png" id="4_y31d1"]
+[ext_resource type="Texture2D" uid="uid://cpyasu4pb4whh" path="res://Assets/fly/ca5bd7b3-a02f-4edc-b0fc-2b47e0934260.png" id="5_78n6q"]
 [ext_resource type="Texture2D" uid="uid://bpqwnusohngar" path="res://Assets/Eat/frame_03_delay-0.1s.png" id="5_03012"]
 [ext_resource type="Texture2D" uid="uid://bbjo5aimxr2c6" path="res://Assets/Eat/frame_04_delay-0.1s.png" id="6_6vu0a"]
-[ext_resource type="Texture2D" uid="uid://bdmsv35g5vxua" path="res://Assets/Character Fly/d40f718a-7fe2-49ce-9553-0f51d99f3b7d.png" id="6_53h7l"]
+[ext_resource type="Texture2D" uid="uid://bdmsv35g5vxua" path="res://Assets/fly/d40f718a-7fe2-49ce-9553-0f51d99f3b7d.png" id="6_53h7l"]
 [ext_resource type="Texture2D" uid="uid://2p7euvow0a7i" path="res://Assets/Eat/frame_05_delay-0.1s.png" id="7_5m1cr"]
 [ext_resource type="Texture2D" uid="uid://d4c63dredug10" path="res://Assets/Eat/frame_06_delay-0.1s.png" id="8_mii7c"]
 [ext_resource type="Texture2D" uid="uid://do4mfvx3a0v2" path="res://Assets/Eat/frame_07_delay-0.1s.png" id="9_t64gh"]
@@ -327,6 +327,7 @@ shape = SubResource("CircleShape2D_57j4c")
 [node name="Night1_camera" type="Camera2D" parent="."]
 position = Vector2(-250, 466)
 scale = Vector2(0.261745, 5.68752)
+zoom = Vector2(1.7, 1.7)
 limit_left = 0
 limit_top = 28
 limit_right = 1278

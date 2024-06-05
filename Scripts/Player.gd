@@ -52,7 +52,6 @@ func _physics_process(_delta):
 		Global.finished = true
 		sprite2D.scale = Vector2(1, 1)
 		sprite2D.play("fly")
-		
 
 func player():
 	pass

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Levels/Night/Night1.gd" id="1_ykwg0"]
 [ext_resource type="PackedScene" uid="uid://ds7nfbx15e463" path="res://Scenes/Player.tscn" id="2_d1hy3"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/Night/scene1.tscn" id="2_rmap2"]
+[ext_resource type="PackedScene" uid="uid://dl54bxxqcb5ji" path="res://Scenes/Levels/Night/scene1.tscn" id="2_rmap2"]
 [ext_resource type="PackedScene" uid="uid://b3yujb5wks88r" path="res://Scenes/Interaction/InteractionArea.tscn" id="5_7ivni"]
 [ext_resource type="PackedScene" uid="uid://brg8rjpm24cv2" path="res://Scenes/SceneTrigger.tscn" id="6_or28p"]
 [ext_resource type="PackedScene" uid="uid://bph87jrx45vnr" path="res://Scenes/HUD.tscn" id="7_osxpf"]
@@ -20,7 +20,7 @@ script = ExtResource("1_ykwg0")
 position = Vector2(-10, -20)
 
 [node name="Player" parent="." instance=ExtResource("2_d1hy3")]
-position = Vector2(60, 85.34)
+position = Vector2(589, 211)
 scale = Vector2(0.15, 0.15)
 
 [node name="Collisions" type="StaticBody2D" parent="."]

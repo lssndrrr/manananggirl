@@ -45,11 +45,11 @@ func finish_changeScenes():
 func add_score():
 	score += 1
 
-func lose():
+func lose(): # change tree scene to lose screen
 	pass
-	# change tree scene to lose screen
 	
-func win():
+	
+func win(): # change tree scene to win screen
 	pass
-	# change tree scene to win screen
+	
 
