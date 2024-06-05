@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4o82hsbxnc2v"]
+
+[ext_resource type="Texture2D" uid="uid://ba10dfosi5e24" path="res://Assets/Scene 1/pixil-frame-0 (42).png" id="1_5a2pu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kov3"]
+size = Vector2(327, 303)
+
+[node name="Scene1-House" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(586, 396)
+texture = ExtResource("1_5a2pu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(604, 317)
+shape = SubResource("RectangleShape2D_4kov3")

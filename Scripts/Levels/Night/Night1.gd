@@ -1,24 +1,42 @@
 extends Node2D
 
+
+@onready var interaction_area = $InteractionArea
+
+var game = preload("res://Scenes/Game.tscn")
+var fished = false
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$HBoxContainer/Player.position.x = Global.player_start_posX
-	$HBoxContainer/Player.position.y = Global.player_start_posY
+	$Player.position.x = Global.player_start_posX
+	$Player.position.y = Global.player_start_posY
+
+	interaction_area.interact = Callable(self, "_on_interact")
+	Global.fished = false
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	change_scene1()
 
-func _on_night_1_trans_body_entered(body):
-	if body.has_method("player"): #Global.fished and 
-		Global.transition_scene = true
-
-func _on_night_1_trans_body_exited(body):
-	if body.has_method("player"):
-		Global.transition_scene = false
 		
 func change_scene1():
-	if Global.transition_scene == true:
-		if Global.current_scene == "Night1":
+	if Global.score >= Global.quota:
+		Global.win()
+	elif Global.transition_scene == true && Global.fished == true && Global.score < Global.quota:
+		if (Global.current_scene == "Night1"):
 			get_tree().change_scene_to_file(Global.Night2)
 			Global.finish_changeScenes()
+			
+func _on_interact():
+	if Global.fished == false:
+		var instance = game.instantiate()
+		instance.position = Vector2(500, 250)
+		
+		add_child(instance)
+		update_state()
+		
+func update_state():
+	interaction_area.update_state()
+

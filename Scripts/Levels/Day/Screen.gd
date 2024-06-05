@@ -2,21 +2,27 @@ extends RichTextLabel
 
 
 @onready var prompt = self
-@onready var prompt_text = self.text
+@onready var timer = $Timer
+@onready var strings = Global.get_day_strings()
 
+var lines = []
 
-func get_prompt() -> String:
-	return prompt_text
-	
+func choose_random_lines():
+	strings.shuffle()
+	lines = strings.slice(0, Global.quota)
+	self.text = lines[0]
+	return lines
 
-func set_char(next_char_index):
-	prompt.parse_bbcode()
+func get_prompt():
+	if lines:
+		self.text = lines[0]
+		return lines.pop_front()
+	else:
+		return false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func get_colored_text(index: int, current_line: String):
+	var colored_text = ""
+	var before_text = current_line.left(index-1)
+	var remaining_text = current_line.substr(index)
+	colored_text = "[color=green]"+  before_text + current_line[index-1] + "[/color]" + remaining_text
+	self.text = colored_text
