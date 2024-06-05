@@ -101,7 +101,6 @@ func add_fish(min_d, max_d, move_speed, move_time):
 	
 func destroy():
 	get_parent().remove_child(self)
-	queue_free()
 
 
 #func _on_IncreaseSpeed_pressed():

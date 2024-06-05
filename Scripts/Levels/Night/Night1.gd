@@ -1,11 +1,8 @@
 extends Node2D
 
-
 @onready var interaction_area = $InteractionArea
 
 var game = preload("res://Scenes/Game.tscn")
-var fished = false
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,12 +11,11 @@ func _ready():
 
 	interaction_area.interact = Callable(self, "_on_interact")
 	Global.fished = false
-
+	interaction_area.update_state(false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	change_scene1()
-
 		
 func change_scene1():
 	if Global.score >= Global.quota:
@@ -38,5 +34,4 @@ func _on_interact():
 		update_state()
 		
 func update_state():
-	interaction_area.update_state()
-
+	interaction_area.update_state(true)

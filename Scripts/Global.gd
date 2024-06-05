@@ -33,7 +33,6 @@ func finish_changeScenes():
 	transition_scene = false
 	finished = false
 
-		
 	if current_scene == "Night1":
 		current_scene = "Night2"
 	elif current_scene == "Night2":

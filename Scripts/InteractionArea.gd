@@ -12,5 +12,5 @@ func _on_body_entered(_body):
 func _on_body_exited(_body):
 	InteractionManager.unregister_area(self)
 	
-func update_state():
-	InteractionManager.hideLabel = true
+func update_state(state):
+	InteractionManager.hideLabel = state

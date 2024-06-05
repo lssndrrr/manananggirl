@@ -45,6 +45,7 @@ position = Vector2(1257, 162)
 z_index = 5
 position = Vector2(49, 128.5)
 shape = SubResource("RectangleShape2D_iwo3g")
+debug_color = Color(0.621186, 0.500057, 0.573344, 0.42)
 
 [node name="HUD" parent="." instance=ExtResource("7_osxpf")]
 offset = Vector2(15, 15)
