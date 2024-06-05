@@ -16,7 +16,16 @@ var fish = preload("res://Scenes/Fish.tscn")
 	#$Settings/DecelerationValue.text = str(hookDeceleration)
 
 func _ready():
-	spawn_easy()
+	if Global.difficulty == 1:
+		spawn_easy()
+	elif Global.difficulty == 2:
+		spawn_medium()
+	elif Global.difficulty == 3:
+		spawn_hard()
+	elif Global.difficulty == 4:
+		spawn_impossible()
+	elif Global.difficulty == 5:
+		spawn_seriously()
 	# Set Initial Variables
 	#update_labels()
 
@@ -136,28 +145,28 @@ func spawn_easy():
 		fishable = false
 
 
-#func spawn_medium():
-	#if (fishable):
-		#add_fish(30, 80, 4, 2)
-		#fishable = false
-#
-#
-#func spawn_hard():
-	#if (fishable):
-		#add_fish(40, 100, 4, 1.5)
-		#fishable = false
-#
-#
-#func spawn_impossible():
-	#if (fishable):
-		#add_fish(60, 140, 3, 1)
-		#fishable = false
-#
-#
-#func spawn_seriously():
-	#if (fishable):
-		#add_fish(85, 160, 2, 1)
-		#fishable = false
+func spawn_medium():
+	if (fishable):
+		add_fish(30, 80, 4, 2)
+		fishable = false
+
+
+func spawn_hard():
+	if (fishable):
+		add_fish(40, 100, 4, 1.5)
+		fishable = false
+
+
+func spawn_impossible():
+	if (fishable):
+		add_fish(60, 140, 3, 1)
+		fishable = false
+
+
+func spawn_seriously():
+	if (fishable):
+		add_fish(85, 160, 2, 1)
+		fishable = false
 
 
 
