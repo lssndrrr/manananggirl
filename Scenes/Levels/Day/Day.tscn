@@ -21,7 +21,6 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Screen" type="RichTextLabel" parent="."]
-anchors_preset = -1
 offset_left = 221.0
 offset_top = 128.0
 offset_right = 1699.0

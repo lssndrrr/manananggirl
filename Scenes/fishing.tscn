@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7y6mdednuh3e"]
 
 [ext_resource type="Script" path="res://Scripts/fishing.gd" id="1_5ewkl"]
-[ext_resource type="Texture2D" uid="uid://dv0rg51ls4hdb" path="res://horizontal/Progress-Empty-h.png" id="1_53kxm"]
-[ext_resource type="Texture2D" uid="uid://h1qti6i7fmhw" path="res://horizontal/Progress-Bar-h.png" id="2_wvrjc"]
-[ext_resource type="Texture2D" uid="uid://ch1qt5u0cmm22" path="res://horizontal/Fishing-Column-h.png" id="3_3vf1s"]
-[ext_resource type="Texture2D" uid="uid://xd32j8yynah3" path="res://horizontal/Hook-h.png" id="4_ynci1"]
+[ext_resource type="Texture2D" uid="uid://cjt3wcclhn2u6" path="res://Assets/Progress-Empty.png" id="1_53kxm"]
+[ext_resource type="Texture2D" uid="uid://v7hqm7frol1x" path="res://Assets/Progress-Bar.png" id="2_wvrjc"]
+[ext_resource type="Texture2D" uid="uid://c6b301hes6g3f" path="res://Assets/Fishing-Column.png" id="3_3vf1s"]
+[ext_resource type="Texture2D" uid="uid://yrhk4amsgy7h" path="res://Assets/Hook.png" id="4_ynci1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hs7p2"]
 size = Vector2(38, 16)

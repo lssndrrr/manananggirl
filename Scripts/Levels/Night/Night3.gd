@@ -2,9 +2,13 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	Global.state = "Night"
+	Music.music()
 	#$Player.position.x = Global.player_start_posX
 	#$Player.position.y = Global.player_start_posY
+	
+	Global.fished = false
+	Global.finished = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

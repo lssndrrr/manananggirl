@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	Global.state = "MainMenu"
 	$VBoxContainer/StartBtn.grab_focus()
 
 func _on_start_btn_pressed():

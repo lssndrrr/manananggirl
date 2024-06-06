@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbfy5fb6ixb6t"]
+[gd_scene load_steps=3 format=3 uid="uid://dycs8qhssfp3p"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_1g6sa"]
+[ext_resource type="AudioStream" uid="uid://c46l6uwmtk6k" path="res://Audio/mainMenu.mp3" id="2_ipgra"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -41,6 +42,10 @@ text = "Tutorial"
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartBtn")
 text = "Quit"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ipgra")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]

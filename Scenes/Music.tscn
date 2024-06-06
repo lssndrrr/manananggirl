@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkfl2w6qosin7"]
+
+[ext_resource type="AudioStream" uid="uid://cq7f7kmj5ufvg" path="res://Audio/night.mp3" id="1_ityrf"]
+[ext_resource type="Script" path="res://Scripts/Music.gd" id="1_o8mu3"]
+[ext_resource type="AudioStream" uid="uid://bovooq7ns0njy" path="res://Audio/day.mp3" id="1_qvhg2"]
+
+[node name="Music" type="Node2D"]
+script = ExtResource("1_o8mu3")
+
+[node name="Day" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_qvhg2")
+
+[node name="Night" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_ityrf")
+volume_db = -7.0
