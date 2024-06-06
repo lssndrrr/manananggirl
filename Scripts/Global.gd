@@ -44,7 +44,7 @@ func add_score():
 	score += 1
 
 func lose(): # change tree scene to lose screen
-	pass
+	get_tree().change_scene_to_file("res://Scenes/Lose.tscn")
 
 func win(): # change tree scene to win screen
-	pass
+	get_tree().change_scene_to_file("res://Scenes/Win.tscn")

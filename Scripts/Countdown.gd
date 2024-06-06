@@ -16,6 +16,5 @@ func update_time():
 	Global.time = "%.2f" % (timer.get_time_left())
 	time.text = str(Global.time)
 
-
 func _on_timer_timeout():
 	Global.lose()
