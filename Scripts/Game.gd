@@ -3,8 +3,8 @@ extends Node2D
 var hookVelocity = 0;
 var hookAcceleration = .1;
 var hookDeceleration = .2
-var maxVelocity = 6.0;
-var bounce = .6
+var maxVelocity = 3.0;
+var bounce = .3
 
 var fishable = true;
 var fish = preload("res://Scenes/Fish.tscn")

@@ -13,6 +13,7 @@ func _ready():
 
 	interaction_area.interact = Callable(self, "_on_interact")
 	Global.fished = false
+	Global.finished = false
 	interaction_area.update_state(false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
