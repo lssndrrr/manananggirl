@@ -6,12 +6,17 @@ const JUMP_VELOCITY = -400.0
 var left = 0
 var right = 1
 
+#signal animation_finished
+
 @onready var sprite2D = $AnimatedSprite2D
 
 var animate = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+#func _ready():
+	#sprite2D.animation_finished.connect(_sprite_finished)
 
 func _physics_process(_delta):
 	## Add the gravity.
@@ -47,6 +52,7 @@ func _physics_process(_delta):
 		sprite2D.scale = Vector2(2, 2)
 
 		await get_tree().create_timer(3.3).timeout
+		#await animation_finished
 				
 		animate = false
 		Global.finished = true
@@ -69,3 +75,7 @@ func current_camera():
 		$Night1_camera.enabled = false
 		$Night2_camera.enabled = false
 		$Night3_camera.enabled = true
+
+#func _sprite_finished(anim_name):
+	#if anim_name == "eat":
+		#animation_finished.emit()

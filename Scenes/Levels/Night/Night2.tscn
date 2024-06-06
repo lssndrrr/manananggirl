@@ -20,6 +20,9 @@ script = ExtResource("1_ngipk")
 position = Vector2(-10, -20)
 
 [node name="HUD" parent="." instance=ExtResource("3_iul08")]
+offset = Vector2(15, 15)
+scale = Vector2(0.675, 0.675)
+transform = Transform2D(0.675, 0, 0, 0.675, 15, 15)
 
 [node name="Player" parent="." instance=ExtResource("1_bsesv")]
 position = Vector2(205, 186)

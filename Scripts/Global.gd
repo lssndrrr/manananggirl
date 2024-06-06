@@ -40,15 +40,12 @@ func finish_changeScenes():
 	elif current_scene == "Night3":
 		current_scene = "Night1"
 
-		
 func add_score():
 	score += 1
 
 func lose(): # change tree scene to lose screen
 	pass
-	
-	
+
+
 func win(): # change tree scene to win screen
 	pass
-	
-
