@@ -6,14 +6,8 @@ var hookDeceleration = .2
 var maxVelocity = 3.0;
 var bounce = .3
 
-var fishable = true;
+var fishable = true
 var fish = preload("res://Scenes/Fish.tscn")
-
-#func update_labels():
-	#$Settings/SpeedValue.text = str(maxVelocity)
-	#$Settings/BounceValue.text = str(bounce)
-	#$Settings/AccelerationValue.text = str(hookAcceleration)
-	#$Settings/DecelerationValue.text = str(hookDeceleration)
 
 func _ready():
 	if Global.difficulty == 1:
@@ -26,13 +20,9 @@ func _ready():
 		spawn_impossible()
 	elif Global.difficulty == 5:
 		spawn_seriously()
-	# Set Initial Variables
-	#update_labels()
 
 func _process(delta):
-
 	if ($Clicker.button_pressed == true || Input.is_action_just_pressed("ui_accept")):
-
 		if hookVelocity > -maxVelocity:
 			hookVelocity -= hookAcceleration
 	else:
@@ -50,7 +40,7 @@ func _process(delta):
 		$Hook.position.y = 38
 	else:
 		$Hook.position.y = target
-		
+
 	# Adjust Value
 	if (fishable == false):
 		if (len($Hook/Area2D.get_overlapping_areas()) > 0):
@@ -74,8 +64,6 @@ func caught_fish():
 	Global.fished = true
 	destroy()
 	
-
-	
 func lost_fish():
 	get_node("Fish").destroy()
 	#$Message.text = "Next time!"
@@ -97,11 +85,9 @@ func add_fish(min_d, max_d, move_speed, move_time):
 	add_child(f)
 	$Progress.value = 200
 	fishable = false
-
 	
 func destroy():
 	get_parent().remove_child(self)
-
 
 #func _on_IncreaseSpeed_pressed():
 	#maxVelocity += .5
@@ -114,7 +100,6 @@ func destroy():
 #func _on_IncreaseAcceleration_pressed():
 	#hookAcceleration += .05
 	#update_labels()
-#
 #
 #func _on_DecreaseAcceleration_pressed():
 	#hookAcceleration -= .05
@@ -149,35 +134,25 @@ func spawn_easy():
 		add_fish(10, 40, 8, 3)
 		fishable = false
 
-
 func spawn_medium():
 	if (fishable):
 		add_fish(30, 80, 4, 2)
 		fishable = false
-
 
 func spawn_hard():
 	if (fishable):
 		add_fish(40, 100, 4, 1.5)
 		fishable = false
 
-
 func spawn_impossible():
 	if (fishable):
 		add_fish(60, 140, 3, 1)
 		fishable = false
 
-
 func spawn_seriously():
 	if (fishable):
 		add_fish(85, 160, 2, 1)
 		fishable = false
-
-
-
-#func _on_MessageTimer_timeout():
-	#$Message.text = ""
-
 
 func _on_Clicker_button_down():
 	hookVelocity -= .5
