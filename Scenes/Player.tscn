@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://ds7nfbx15e463"]
+[gd_scene load_steps=78 format=3 uid="uid://ds7nfbx15e463"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4cc48"]
 [ext_resource type="Texture2D" uid="uid://buerc5c8id4ui" path="res://Assets/fly/7a58f2e4-da7d-4b00-a82f-98e2b848d275.png" id="1_y4dog"]
@@ -73,6 +73,8 @@
 [ext_resource type="Texture2D" uid="uid://do5oi2i5v1elx" path="res://Assets/Eat/frame_63_delay-0.1s.png" id="65_e3r61"]
 [ext_resource type="Texture2D" uid="uid://htqbin7qyqhw" path="res://Assets/Eat/frame_64_delay-0.1s.png" id="66_xvej5"]
 [ext_resource type="Texture2D" uid="uid://bmq0jxw0n1nj5" path="res://Assets/Eat/frame_65_delay-0.1s.png" id="67_o1yve"]
+[ext_resource type="AudioStream" uid="uid://bj607siscwsve" path="res://Audio/wings-flapping.mp3" id="74_sc3sc"]
+[ext_resource type="AudioStream" uid="uid://gb74ma6035d5" path="res://Audio/cry.mp3" id="75_8cmni"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dmp7d"]
 animations = [{
@@ -351,3 +353,13 @@ drag_vertical_enabled = true
 
 [node name="Night3_camera" type="Camera2D" parent="."]
 position = Vector2(708, 374)
+
+[node name="Wings" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("74_sc3sc")
+volume_db = -10.0
+pitch_scale = 0.8
+autoplay = true
+
+[node name="Cry" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("75_8cmni")
+volume_db = -4.0

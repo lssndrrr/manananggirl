@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 Global="*res://Scripts/Global.gd"
 InteractionManager="*res://Scenes/Interaction/InteractionManager.tscn"
 TransitionScreen="*res://Scenes/TransitionScreen.tscn"
+Game="*res://Scenes/Game.tscn"
 
 [display]
 

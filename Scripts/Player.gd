@@ -4,8 +4,13 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @onready var sprite2D = $AnimatedSprite2D
+@onready var wing_sfx = $Wings
+@onready var cry = $Cry
 
 var animate = false
+
+func _ready():
+	wing_sfx.play()
 
 func _physics_process(_delta):
 	if Global.fished && !Global.finished:
@@ -28,6 +33,7 @@ func _physics_process(_delta):
 		
 	else:
 		sprite2D.play("eat")
+		cry.play()
 		sprite2D.scale = Vector2(2, 2)
 
 		await get_tree().create_timer(3.3).timeout
@@ -36,6 +42,7 @@ func _physics_process(_delta):
 		Global.finished = true
 		sprite2D.scale = Vector2(1, 1)
 		sprite2D.play("fly")
+		cry.stop()
 
 func player():
 	pass

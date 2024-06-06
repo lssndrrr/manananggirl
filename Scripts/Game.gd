@@ -8,8 +8,11 @@ var bounce = .3
 
 var fishable = true
 var fish = preload("res://Scenes/Fish.tscn")
+@onready var fish_sfx = $Fishing
 
 func _ready():
+	fish_sfx.play()
+	
 	if Global.difficulty == 1:
 		spawn_easy()
 	elif Global.difficulty == 2:
@@ -62,6 +65,7 @@ func caught_fish():
 
 	Global.add_score()
 	Global.fished = true
+	stop_sfx()
 	destroy()
 	
 func lost_fish():
@@ -72,6 +76,9 @@ func lost_fish():
 	$Progress.value = 0
 	fishable = true
 	spawn_easy()
+	
+func stop_sfx():
+	fish_sfx.stop()
 	
 func add_fish(min_d, max_d, move_speed, move_time):
 	var f = fish.instantiate()

@@ -32,6 +32,7 @@ var player_start_posY = 25
 func finish_changeScenes():
 	transition_scene = false
 	finished = false
+	fished = false
 
 	if current_scene == "Night1":
 		current_scene = "Night2"
