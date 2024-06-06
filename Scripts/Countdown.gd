@@ -17,5 +17,4 @@ func update_time():
 	time.text = str(Global.time)
 
 func _on_timer_timeout():
-	Game.stop_sfx()
 	Global.lose()

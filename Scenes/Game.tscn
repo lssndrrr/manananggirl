@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cng3fkke17b0e"]
+[gd_scene load_steps=11 format=3 uid="uid://cng3fkke17b0e"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_dxeyc"]
 [ext_resource type="Texture2D" uid="uid://cjt3wcclhn2u6" path="res://Assets/Progress-Empty.png" id="2_yqlh3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c6b301hes6g3f" path="res://Assets/Fishing-Column.png" id="4_diwo4"]
 [ext_resource type="Texture2D" uid="uid://yrhk4amsgy7h" path="res://Assets/Hook.png" id="5_d3dt7"]
 [ext_resource type="AudioStream" uid="uid://bw6v6u72m8u1c" path="res://Audio/fish.mp3" id="6_pkqvj"]
+[ext_resource type="AudioStream" uid="uid://cvtoyep8gibsw" path="res://Audio/string.mp3" id="7_udqmv"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(13.5985, 37.9946)
@@ -59,6 +60,9 @@ shortcut = SubResource("Shortcut_pymxx")
 [node name="Fishing" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_pkqvj")
 volume_db = -2.0
+
+[node name="String" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_udqmv")
 
 [connection signal="button_down" from="Clicker" to="." method="_on_Clicker_button_down"]
 [connection signal="pressed" from="Clicker" to="." method="_on_Clicker_pressed"]

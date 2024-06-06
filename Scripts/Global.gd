@@ -18,6 +18,9 @@ var Night3 = "res://Scenes/Levels/Night/Night3.tscn"
 #day levels
 var Day = "res://Scenes/Levels/Day/Day1.tscn"
 
+#game state
+var state
+
 func get_day_strings() -> Array:
 	if difficulty == 1:
 		return ["scan_network;", "access_patient_records;", "bypass_antivirus;", "copy_database_backup;", "deploy_keylogger;", "view_public_records;"]

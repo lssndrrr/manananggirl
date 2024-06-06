@@ -4,6 +4,13 @@ extends Node2D
 @onready var current_letter_index: int = -1
 @onready var lines_typed: int = 0
 
+func _ready():
+	Global.state = "Day"
+	Music.music()
+	
+	$Screen.choose_random_lines()
+	new_line()
+
 func new_line():
 	var prompt = $Screen.get_prompt()
 	if prompt is bool and prompt == false:
@@ -46,12 +53,5 @@ func _unhandled_input(event:InputEvent) -> void:
 			else:
 				print("wrong key typed: ", key_typed, next_char)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$Screen.choose_random_lines()
-	new_line()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

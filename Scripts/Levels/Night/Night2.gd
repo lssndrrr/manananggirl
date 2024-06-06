@@ -6,12 +6,18 @@ var game = preload("res://Scenes/Game.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.state = "Night"
+	Music.music()
+	
 	$Player.position.x = Global.player_start_posX
 	$Player.position.y = Global.player_start_posY
 	$HUD.visible = true
 	
 	interaction_area.interact = Callable(self, "_on_interact")
 	interaction_area.update_state(false)
+	
+	Global.fished = false
+	Global.finished = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

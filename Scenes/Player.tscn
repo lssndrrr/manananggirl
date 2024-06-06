@@ -74,7 +74,7 @@
 [ext_resource type="Texture2D" uid="uid://htqbin7qyqhw" path="res://Assets/Eat/frame_64_delay-0.1s.png" id="66_xvej5"]
 [ext_resource type="Texture2D" uid="uid://bmq0jxw0n1nj5" path="res://Assets/Eat/frame_65_delay-0.1s.png" id="67_o1yve"]
 [ext_resource type="AudioStream" uid="uid://bj607siscwsve" path="res://Audio/wings-flapping.mp3" id="74_sc3sc"]
-[ext_resource type="AudioStream" uid="uid://gb74ma6035d5" path="res://Audio/cry.mp3" id="75_8cmni"]
+[ext_resource type="AudioStream" uid="uid://2a5mv6wjbmws" path="res://Audio/burp.mp3" id="75_tv30o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dmp7d"]
 animations = [{
@@ -360,6 +360,6 @@ volume_db = -10.0
 pitch_scale = 0.8
 autoplay = true
 
-[node name="Cry" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("75_8cmni")
+[node name="Burp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("75_tv30o")
 volume_db = -4.0

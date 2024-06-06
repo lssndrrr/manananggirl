@@ -9,10 +9,13 @@ var bounce = .3
 var fishable = true
 var fish = preload("res://Scenes/Fish.tscn")
 @onready var fish_sfx = $Fishing
+@onready var string_sfx = $String
 
 func _ready():
 	fish_sfx.play()
+	spawn()
 	
+func spawn():
 	if Global.difficulty == 1:
 		spawn_easy()
 	elif Global.difficulty == 2:
@@ -57,9 +60,6 @@ func _process(delta):
 		
 func caught_fish():
 	get_node("Fish").destroy()
-	#$Message.text = "Caught one!"
-	#$MessageTimer.set_wait_time(3);
-	#$MessageTimer.start()
 	$Progress.value = 0
 	fishable = true
 
@@ -70,12 +70,10 @@ func caught_fish():
 	
 func lost_fish():
 	get_node("Fish").destroy()
-	#$Message.text = "Next time!"
-	#$MessageTimer.set_wait_time(3);
-	#$MessageTimer.start()
 	$Progress.value = 0
 	fishable = true
-	spawn_easy()
+	string_sfx.play()
+	spawn()
 	
 func stop_sfx():
 	fish_sfx.stop()
