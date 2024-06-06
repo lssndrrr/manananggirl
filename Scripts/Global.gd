@@ -20,8 +20,72 @@ var Day = "res://Scenes/Levels/Day/Day1.tscn"
 
 func get_day_strings() -> Array:
 	if difficulty == 1:
-		return ["scan_network;", "access_patient_records;", "bypass_antivirus;", "copy_database_backup;", "deploy_keylogger;", "view_public_records;"]
-	return []
+		return [
+		"scan_network;", 
+		"access_patient_records;", 
+		"bypass_antivirus;", 
+		"copy_database_backup;", 
+		"deploy_keylogger;", 
+		"view_public_records;", 
+		"change_user_password;", 
+		"extract_metadata;", 
+		"intercept_emails;", 
+		"monitor_web_traffic;"
+		]
+	elif difficulty == 2:
+		return [
+		"decrypt_simple_password;", 
+		"modify_web_content;", 
+		"exploit_vulnerable_service;", 
+		"escalate_privileges;", 
+		"spoof_email;", 
+		"tamper_audit_logs;", 
+		"access_internal_wiki;", 
+		"plant_malware;", 
+		"disable_security_tools;", 
+		"map_internal_network;"
+		]
+	elif difficulty == 3:
+		return [
+		"create_custom_exploit;", 
+		"decrypt_complex_password;", 
+		"bypass_multi_factor_authentication;", 
+		"manipulate_financial_records;", 
+		"install_rootkit;", 
+		"compromise_critical_systems;", 
+		"exploit_zero_day_vulnerability;", 
+		"intercept_communications;", 
+		"exfiltrate_sensitive_data;", 
+		"manipulate_database_entries;"
+		]
+	elif difficulty == 4:
+		return [
+		"compromise_network_infrastructure;", 
+		"develop_persistent_backdoor;", 
+		"manipulate_system_firmware;", 
+		"conduct_spear_phishing_attack;", 
+		"execute_remote_code;", 
+		"perform_advanced_persistent_threat;", 
+		"undermine_cryptographic_protocols;", 
+		"deploy_advanced_malware;", 
+		"subvert_software_update_process;", 
+		"access_top_secret_files;"
+		]
+	elif difficulty == 5:
+		return [
+		"conduct_advanced_persistent_threat_operations;", 
+		"exploit_vulnerability --type \"SQL injection\";", 
+		"infiltrate_secure_server --method \"exploit chaining\";", 
+		"compromise_national_security_systems;", 
+		"extract_sensitive_data --target \"financial_records\";", 
+		"manipulate_critical_infrastructure;", 
+		"bypass_advanced_encryption_standards;", 
+		"orchestrate_global_cyber_attack;", 
+		"brute_force_password --target \"hospital_database\";", 
+		"deploy_ransomware --target \"critical_infrastructure\";"
+		]
+	else:
+		return []
 
 var current_scene = "Night1"
 var transition_scene = false
