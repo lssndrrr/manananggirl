@@ -3,7 +3,7 @@ extends Node
 # From day levels
 var quota = 3
 var time = 300.0 #in seconds
-var difficulty = 1 # 1 - easy; 2 -medium; 3 - hard; 4 - impossible; 5 - seriously
+var difficulty = 1 # 1 - easy; 2 -n medium; 3 - hard; 4 - impossible; 5 - seriously
 
 # Global variables
 var score = 0
@@ -96,6 +96,7 @@ var player_start_posY = 25
 func finish_changeScenes():
 	transition_scene = false
 	finished = false
+	fished = false
 
 	if current_scene == "Night1":
 		current_scene = "Night2"
@@ -108,8 +109,7 @@ func add_score():
 	score += 1
 
 func lose(): # change tree scene to lose screen
-	pass
-
+	get_tree().change_scene_to_file("res://Scenes/Lose.tscn")
 
 func win(): # change tree scene to win screen
-	pass
+	get_tree().change_scene_to_file("res://Scenes/Win.tscn")
