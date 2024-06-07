@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_omfym")
 script = ExtResource("1_1g6sa")
-metadata/_edit_vertical_guides_ = [320.0, 917.0]
+metadata/_edit_vertical_guides_ = [320.0, 960.0]
 metadata/_edit_horizontal_guides_ = [180.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -71,7 +71,7 @@ stream = ExtResource("2_ipgra")
 autoplay = true
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(996, 276)
+position = Vector2(966, 269)
 scale = Vector2(3.84, 3.84)
 texture = ExtResource("3_jiejg")
 

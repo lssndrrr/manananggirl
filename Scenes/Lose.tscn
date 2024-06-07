@@ -21,23 +21,31 @@ texture = ExtResource("2_7e268")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 810.0
+offset_left = 741.5
 offset_top = 700.0
-offset_right = 1110.0
-offset_bottom = 766.0
+offset_right = 1178.5
+offset_bottom = 862.0
 alignment = 1
 
 [node name="Restart" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.942823, 0.942823, 0.942823, 1)
+theme_override_colors/font_pressed_color = Color(0.685146, 0.289014, 0.479088, 1)
+theme_override_colors/font_hover_color = Color(0.65098, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_8jfx4")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 70
 text = "Restart"
+flat = true
 
 [node name="MainMenu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.942823, 0.942823, 0.942823, 1)
+theme_override_colors/font_pressed_color = Color(0.685146, 0.289014, 0.479088, 1)
+theme_override_colors/font_hover_color = Color(0.65098, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_8jfx4")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 70
 text = "Quit to Main Menu"
+flat = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
