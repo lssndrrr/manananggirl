@@ -28,6 +28,8 @@ func change_scene2():
 		if Global.difficulty == 5:
 			Global.win()
 		Global.difficulty +=1
+		Global.lives = 3
+		get_tree().change_scene_to_file("res://Scenes/Levels/Day/Day.tscn")
 	elif Global.transition_scene == true && Global.fished == true && Global.score < Global.quota:
 		if (Global.current_scene == "Night2"):
 			Global.finish_changeScenes()

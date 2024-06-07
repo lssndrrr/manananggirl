@@ -1,10 +1,12 @@
 extends Node
 
 # From day levels
-var quota = 5
+var quota = 3
+var quota_dict = {1: 3, 2: 5, 3: 7, 4:10, 5:15}
 var time = 300.0 #in seconds
 var difficulty = 1 # 1 - easy; 2 -n medium; 3 - hard; 4 - impossible; 5 - seriously
 var lives = 3
+
 
 # Global variables
 var score = 0

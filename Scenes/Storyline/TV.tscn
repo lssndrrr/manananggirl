@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://hqy55ps1vdik"]
+[gd_scene load_steps=4 format=3 uid="uid://hqy55ps1vdik"]
 
 [ext_resource type="Script" path="res://Scripts/Storyline/TV.gd" id="1_tjc5i"]
 [ext_resource type="Texture2D" uid="uid://uq5pavfdosy7" path="res://Assets/computer-screen-square.png" id="2_4d7n8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24g25"]
 
 [node name="TV" type="Node2D"]
 script = ExtResource("1_tjc5i")
@@ -32,5 +34,11 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Skip"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_24g25")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+root_node = NodePath("../..")
 
 [connection signal="pressed" from="HBoxContainer/Skip" to="." method="_on_skip_pressed"]

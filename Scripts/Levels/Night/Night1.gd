@@ -8,6 +8,7 @@ var game = preload("res://Scenes/Game.tscn")
 func _ready():
 	Global.state = "Night"
 	Music.music()
+	Global.quota = Global.quota_dict[Global.difficulty]
 	
 	$Player.position.x = Global.player_start_posX
 	$Player.position.y = Global.player_start_posY
@@ -28,6 +29,8 @@ func change_scene1():
 		if Global.difficulty == 5:
 			Global.win()
 		Global.difficulty +=1
+		Global.lives = 3
+		get_tree().change_scene_to_file("res://Scenes/Levels/Day/Day.tscn")
 	elif Global.transition_scene == true && Global.fished == true && Global.score < Global.quota:
 		if (Global.current_scene == "Night1"):		
 			Global.finish_changeScenes()
