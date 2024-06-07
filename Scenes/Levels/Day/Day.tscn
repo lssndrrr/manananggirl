@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://fjhlnjovxfag" path="res://Assets/computer-screen-wide.png" id="2_gkb1q"]
 [ext_resource type="FontFile" uid="uid://djouvuhmgxkgl" path="res://Assets/Fonts/computer_pixel-7.ttf" id="3_bfgci"]
 [ext_resource type="Script" path="res://Scripts/Levels/Day/Screen.gd" id="3_qm615"]
-[ext_resource type="AudioStream" uid="uid://c202602m81rp4" path="res://Audio/keyboard2.mp3" id="3_t3nk4"]
 [ext_resource type="AudioStream" uid="uid://b884bcbqnt05f" path="res://Audio/keyboard3.wav" id="4_08f3f"]
 [ext_resource type="AudioStream" uid="uid://d23vv3jv8uyr1" path="res://Audio/keyboard4.mp3" id="5_c1rtq"]
-[ext_resource type="AudioStream" uid="uid://djs214bak53ie" path="res://Audio/wrong.mp3" id="6_ltmqe"]
+[ext_resource type="AudioStream" uid="uid://cf5sbywt5hk8j" path="res://Audio/keyboard5.mp3" id="5_efy07"]
+[ext_resource type="AudioStream" uid="uid://djs214bak53ie" path="res://Audio/wrong.mp3" id="6_dg4rf"]
 
 [node name="Day1" type="Node2D"]
 script = ExtResource("1_nf2ms")
@@ -23,7 +23,7 @@ stream = ExtResource("2_btsyh")
 
 [node name="keeb2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(226, 116)
-stream = ExtResource("3_t3nk4")
+stream = ExtResource("5_c1rtq")
 
 [node name="keeb3" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(226, 116)
@@ -32,11 +32,11 @@ area_mask = 3
 
 [node name="keeb4" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(226, 116)
-stream = ExtResource("5_c1rtq")
+stream = ExtResource("5_efy07")
 
 [node name="wrongkey" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(226, 116)
-stream = ExtResource("6_ltmqe")
+stream = ExtResource("6_dg4rf")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 38.0
@@ -57,3 +57,28 @@ theme_override_fonts/normal_font = ExtResource("3_bfgci")
 theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 script = ExtResource("3_qm615")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1522.0
+offset_top = 641.0
+offset_right = 1716.0
+offset_bottom = 740.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.746939, 0.705624, 1)
+theme_override_fonts/font = ExtResource("3_bfgci")
+theme_override_font_sizes/font_size = 50
+
+[node name="Lives" type="RichTextLabel" parent="."]
+offset_left = 1523.0
+offset_top = 701.0
+offset_right = 1740.0
+offset_bottom = 760.0
+theme_override_fonts/normal_font = ExtResource("3_bfgci")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "XXX"
+
+[node name="Delay" type="Timer" parent="."]

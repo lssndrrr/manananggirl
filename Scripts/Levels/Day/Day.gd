@@ -8,16 +8,23 @@ extends Node2D
 var current_sound_index = -1  # Start with an invalid index
 var timer_duration = 10.0
 var time_left = timer_duration
+var timer
 
 func _ready():
 	Global.state = "Day"
 	Music.music()
+	timer = $Delay
+	timer.wait_time = 0.5 # Delay in seconds
+	timer.one_shot = true # Timer will stop after timeout
+	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
+
 	
-	
+	update_label()
 	$Screen.choose_random_lines()
 	new_line()
 
 func new_line():
+	update_label()
 	var prompt = $Screen.get_prompt()
 	if prompt is bool and prompt == false:
 		print("all done")
@@ -51,6 +58,7 @@ func _unhandled_input(event:InputEvent) -> void:
 					current_letter_index += 1
 					$Screen.get_colored_text(current_letter_index, current_line)
 					if current_letter_index == current_line.length():
+						lines_typed +=1
 						current_letter_index = -1
 						new_line()
 				elif typed_event.keycode == KEY_SHIFT:
@@ -58,8 +66,9 @@ func _unhandled_input(event:InputEvent) -> void:
 				else:
 					wrongkey.play()
 					Global.lives -=1
+					update_lives_label()
 					if Global.lives <= 0:
-						Global.lose()
+						timer.start()
 					print("wrong key typed: ", key_typed, next_char)
 
 func _process(delta):
@@ -74,9 +83,20 @@ func play_random_sound():
 	keebsounds[current_sound_index].play()
 
 
-func _on_timer_timeout():
-	pass # lose
-	update_timer_label()
+func _on_Timer_timeout():
+	Global.lose()
+	
+func update_label():
+	$Label.text = "Lines:" + str(lines_typed) +"/"+ str(Global.quota)
 
 func update_timer_label():
 	$Label.text = "Time Left: " + str(time_left)
+	
+func update_lives_label():
+	var lives_text = ""
+	for i in range(3):
+		if i < 3 - Global.lives:
+			lives_text += "[color=red]X[/color]"
+		else:
+			lives_text += "X"
+	$Lives.text = lives_text
