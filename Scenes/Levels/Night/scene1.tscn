@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dl54bxxqcb5ji"]
+[gd_scene load_steps=33 format=3 uid="uid://d0eqb7fmt81cy"]
 
 [ext_resource type="Texture2D" uid="uid://ckrdb0pno7klc" path="res://Assets/Scene 1/night.png" id="1_wbww4"]
 [ext_resource type="PackedScene" uid="uid://c4o82hsbxnc2v" path="res://Scenes/scene1-house.tscn" id="1_wxxx5"]
