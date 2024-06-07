@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc527h5ke0fo4"
-path="res://.godot/imported/postelight2.png-4a0d49801b1e8358d2f12035dbfbd9e6.ctex"
+uid="uid://bva3bs3jkf2i1"
+path="res://.godot/imported/pixil-frame-0 (32).png-27432ddf324fe577080ad62f8cbab7b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fonts/Scene 2/postelight2.png"
-dest_files=["res://.godot/imported/postelight2.png-4a0d49801b1e8358d2f12035dbfbd9e6.ctex"]
+source_file="res://Assets/Scene 3/pixil-frame-0 (32).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (32).png-27432ddf324fe577080ad62f8cbab7b6.ctex"]
 
 [params]
 

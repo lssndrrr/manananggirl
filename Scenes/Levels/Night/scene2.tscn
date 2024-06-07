@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bkk4mv7b7e4ig" path="res://Assets/Scene 1/pixil-frame-0 (44).png" id="5_novlq"]
 [ext_resource type="Texture2D" uid="uid://bgrhj1jna3uaw" path="res://Assets/Scene 1/pixil-frame-0 (32).png" id="6_dfx3m"]
 [ext_resource type="Texture2D" uid="uid://dfuao0v84jf3n" path="res://Assets/Scene 2/pixil-frame-0 (60).png" id="6_oiocl"]
-[ext_resource type="Texture2D" uid="uid://c8mbq22h7d2af" path="res://Assets/Fonts/Scene 2/pixil-frame-0 (61).png" id="7_h7h0l"]
 [ext_resource type="Texture2D" uid="uid://djosfq6p16yl6" path="res://Assets/Scene 1/night2.png" id="7_jfvgf"]
 [ext_resource type="Texture2D" uid="uid://4fyon3726ggc" path="res://Assets/Scene 1/pixil-frame-0 (35).png" id="8_0wxfr"]
 [ext_resource type="Texture2D" uid="uid://f04blvbwtsq6" path="res://Assets/Scene 2/pixil-frame-0 (65).png" id="8_562nc"]
@@ -19,14 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://qa2w2gor5m45" path="res://Assets/Scene 1/pixil-frame-0 (55).png" id="12_nevi7"]
 [ext_resource type="Texture2D" uid="uid://bns8u6r6ijoj7" path="res://Assets/Scene 1/pixil-frame-0 (23).png" id="13_pblve"]
 [ext_resource type="Texture2D" uid="uid://b418dej5rm3t1" path="res://Assets/Scene 2/pixil-frame-0 (58).png" id="14_asp8f"]
-[ext_resource type="Texture2D" uid="uid://c6sikpeajqm5f" path="res://Assets/Fonts/Scene 2/pixil-frame-0 (70).png" id="14_fo26n"]
 [ext_resource type="Texture2D" uid="uid://ps6xxwn24rf4" path="res://Assets/Scene 1/pixil-frame-0 (38).png" id="14_vuyld"]
-[ext_resource type="Texture2D" uid="uid://ro7ra1kyyv31" path="res://Assets/Fonts/Scene 2/pixil-frame-0 (70)(1).png" id="15_e58xy"]
 [ext_resource type="Texture2D" uid="uid://bpdwdwov6nyxo" path="res://Assets/Scene 1/pixil-frame-0 (40).png" id="15_edxy4"]
 [ext_resource type="Texture2D" uid="uid://ceeqbong0py03" path="res://Assets/Scene 2/pixil-frame-0 (59).png" id="16_bqlq3"]
 [ext_resource type="Texture2D" uid="uid://dkgnf3jfgjl6w" path="res://Assets/Scene 2/pixil-frame-0 (41).png" id="16_so8e8"]
 [ext_resource type="Texture2D" uid="uid://buqy7pw7xpdcd" path="res://Assets/Scene 2/postelight2.png" id="26_r7jqo"]
-[ext_resource type="Texture2D" uid="uid://dc527h5ke0fo4" path="res://Assets/Fonts/Scene 2/postelight2.png" id="27_fjdu1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_431om"]
 texture = ExtResource("1_06h8c")
@@ -58,8 +54,11 @@ texture = ExtResource("6_oiocl")
 5:0/size_in_atlas = Vector2i(39, 25)
 5:0/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k51ie"]
+load_path = "res://.godot/imported/pixil-frame-0 (61).png-b2db56080aea9221e0e624fa615a6fb1.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_td7tu"]
-texture = ExtResource("7_h7h0l")
+texture = SubResource("CompressedTexture2D_k51ie")
 4:0/size_in_atlas = Vector2i(29, 18)
 4:0/0 = 0
 
@@ -88,13 +87,19 @@ texture = ExtResource("7_jfvgf")
 0:0/size_in_atlas = Vector2i(40, 2)
 0:0/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oj2yq"]
+load_path = "res://.godot/imported/pixil-frame-0 (70).png-75641bf2a85043c85d913bd87455a074.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nusw8"]
-texture = ExtResource("14_fo26n")
+texture = SubResource("CompressedTexture2D_oj2yq")
 1:0/size_in_atlas = Vector2i(5, 4)
 1:0/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e0pdb"]
+load_path = "res://.godot/imported/pixil-frame-0 (70)(1).png-72c1f61ee0989f740b99a217d140e804.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7erji"]
-texture = ExtResource("15_e58xy")
+texture = SubResource("CompressedTexture2D_e0pdb")
 0:0/size_in_atlas = Vector2i(4, 3)
 0:0/0 = 0
 
@@ -184,48 +189,51 @@ sources/22 = SubResource("TileSetAtlasSource_7erji")
 atlas = ExtResource("26_r7jqo")
 region = Rect2(4100, 0, 410, 300)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w21nq"]
+load_path = "res://.godot/imported/postelight2.png-4a0d49801b1e8358d2f12035dbfbd9e6.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_o3v52"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(0, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nff7s"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(410, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g13ns"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(820, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfkev"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(1230, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w2new"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(1640, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ym013"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(2050, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qekin"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(2460, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ahhtn"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(2870, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vqfcy"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(3280, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3dalo"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(3690, 0, 410, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gie5k"]
-atlas = ExtResource("27_fjdu1")
+atlas = SubResource("CompressedTexture2D_w21nq")
 region = Rect2(4100, 0, 410, 300)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2ugg2"]
