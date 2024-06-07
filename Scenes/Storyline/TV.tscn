@@ -1,31 +1,150 @@
-[gd_scene load_steps=4 format=3 uid="uid://hqy55ps1vdik"]
+[gd_scene load_steps=33 format=3 uid="uid://hqy55ps1vdik"]
 
 [ext_resource type="Script" path="res://Scripts/Storyline/TV.gd" id="1_tjc5i"]
-[ext_resource type="Texture2D" uid="uid://uq5pavfdosy7" path="res://Assets/computer-screen-square.png" id="2_4d7n8"]
+[ext_resource type="Texture2D" uid="uid://boiml30c7j0l7" path="res://Assets/TV/tv/pixil-frame-0.png" id="2_6qqt3"]
+[ext_resource type="Texture2D" uid="uid://bnxdci5kfrok2" path="res://Assets/darkbg.jpg" id="2_cqo8m"]
+[ext_resource type="Texture2D" uid="uid://cuumva18kfa8y" path="res://Assets/TV/tv/pixil-frame-1.png" id="3_porb6"]
+[ext_resource type="Texture2D" uid="uid://o2icjf8e805b" path="res://Assets/TV/tv/pixil-frame-2.png" id="4_nds8c"]
+[ext_resource type="Texture2D" uid="uid://b2mhfmw4optui" path="res://Assets/TV/tv/pixil-frame-3.png" id="5_w0qqb"]
+[ext_resource type="Texture2D" uid="uid://olmh68mpg1p" path="res://Assets/TV/tv/pixil-frame-4.png" id="6_8j677"]
+[ext_resource type="Texture2D" uid="uid://cjlehq3imfucf" path="res://Assets/TV/tv/pixil-frame-5.png" id="7_sgwd8"]
+[ext_resource type="Texture2D" uid="uid://dnbhdwf4mmadc" path="res://Assets/TV/tv/pixil-frame-6.png" id="8_ufk2f"]
+[ext_resource type="Texture2D" uid="uid://cvqhrr2srjiso" path="res://Assets/TV/tv/pixil-frame-7.png" id="9_lk8kx"]
+[ext_resource type="Texture2D" uid="uid://dw4qcwstch8ud" path="res://Assets/TV/tv/pixil-frame-8.png" id="10_yqkd2"]
+[ext_resource type="Texture2D" uid="uid://d24jge03t0sj6" path="res://Assets/TV/tv/pixil-frame-9.png" id="11_33avp"]
+[ext_resource type="Texture2D" uid="uid://fs2yviqy1hk" path="res://Assets/TV/tv/pixil-frame-10.png" id="12_4fibv"]
+[ext_resource type="Texture2D" uid="uid://bulik37diuwwn" path="res://Assets/TV/tv/pixil-frame-11.png" id="13_jqkdl"]
+[ext_resource type="Texture2D" uid="uid://dkigm6biebgh2" path="res://Assets/TV/tv/pixil-frame-12.png" id="14_nmpek"]
+[ext_resource type="Texture2D" uid="uid://bx56b1dkwrosy" path="res://Assets/TV/tv/pixil-frame-13.png" id="15_xbw53"]
+[ext_resource type="Texture2D" uid="uid://dufna7wa7xnwp" path="res://Assets/TV/tv/pixil-frame-14.png" id="16_7d0d3"]
+[ext_resource type="Texture2D" uid="uid://fhjjwjpht0ba" path="res://Assets/TV/tv/pixil-frame-15.png" id="17_15hmo"]
+[ext_resource type="Texture2D" uid="uid://chvt00oxhegm5" path="res://Assets/TV/tv/pixil-frame-16.png" id="18_6sq5m"]
+[ext_resource type="Texture2D" uid="uid://dtrlk4evcbdqw" path="res://Assets/TV/tv/pixil-frame-17.png" id="19_hjmis"]
+[ext_resource type="Texture2D" uid="uid://ceehjg6243pu6" path="res://Assets/TV/tv/pixil-frame-18.png" id="20_8tq24"]
+[ext_resource type="Texture2D" uid="uid://bk5g6eiotojxk" path="res://Assets/TV/tv/pixil-frame-19.png" id="21_b2ufb"]
+[ext_resource type="Texture2D" uid="uid://dctlihx5hs8jd" path="res://Assets/TV/tv/pixil-frame-20.png" id="22_sjaki"]
+[ext_resource type="Texture2D" uid="uid://clucx7bisnvlf" path="res://Assets/TV/tv/pixil-frame-21.png" id="23_f754v"]
+[ext_resource type="Texture2D" uid="uid://7r3yt7k0t1lt" path="res://Assets/TV/tv/pixil-frame-22.png" id="24_fhifl"]
+[ext_resource type="Texture2D" uid="uid://cyhbbh2x6xiut" path="res://Assets/TV/tv/pixil-frame-23.png" id="25_qp7he"]
+[ext_resource type="Texture2D" uid="uid://dfuprc38ekxay" path="res://Assets/TV/tv/pixil-frame-24.png" id="26_s6epr"]
+[ext_resource type="Texture2D" uid="uid://ci8uu06j8xee6" path="res://Assets/TV/tv/pixil-frame-25.png" id="27_vjx13"]
+[ext_resource type="Texture2D" uid="uid://bjytg8iw7bkhf" path="res://Assets/TV/tv/pixil-frame-26.png" id="28_s7afi"]
+[ext_resource type="Texture2D" uid="uid://ctiv25g1wowwh" path="res://Assets/TV/tv/pixil-frame-27.png" id="29_m71j7"]
+[ext_resource type="Texture2D" uid="uid://bm8cv34143118" path="res://Assets/TV/tv/pixil-frame-28.png" id="30_g27rk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_24g25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6qqt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_porb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nds8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0qqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8j677")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sgwd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ufk2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lk8kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yqkd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_33avp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4fibv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jqkdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nmpek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xbw53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7d0d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_15hmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6sq5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hjmis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8tq24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b2ufb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sjaki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_f754v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fhifl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qp7he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_s6epr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vjx13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_s7afi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_m71j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_g27rk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [node name="TV" type="Node2D"]
 script = ExtResource("1_tjc5i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 1528.0
-offset_bottom = 1408.0
-scale = Vector2(0.428886, 0.298545)
-texture = ExtResource("2_4d7n8")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cqo8m")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 560.0
-offset_top = 312.0
-offset_right = 632.04
-offset_bottom = 352.0
+offset_left = 1500.0
+offset_top = 850.0
+offset_right = 1572.04
+offset_bottom = 890.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -36,9 +155,8 @@ size_flags_horizontal = 3
 text = "Skip"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(976, 536)
+scale = Vector2(3.20769, 3.20769)
 sprite_frames = SubResource("SpriteFrames_24g25")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
-root_node = NodePath("../..")
 
 [connection signal="pressed" from="HBoxContainer/Skip" to="." method="_on_skip_pressed"]

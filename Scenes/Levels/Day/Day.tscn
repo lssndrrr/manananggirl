@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cd8u8crf2llxd"]
+[gd_scene load_steps=11 format=3 uid="uid://cd8u8crf2llxd"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day/Day.gd" id="1_nf2ms"]
 [ext_resource type="AudioStream" uid="uid://dwq7qt8hm1now" path="res://Audio/keyboard1.mp3" id="2_btsyh"]
 [ext_resource type="Texture2D" uid="uid://fjhlnjovxfag" path="res://Assets/computer-screen-wide.png" id="2_gkb1q"]
+[ext_resource type="Texture2D" uid="uid://bnxdci5kfrok2" path="res://Assets/darkbg.jpg" id="2_ygwpg"]
 [ext_resource type="FontFile" uid="uid://djouvuhmgxkgl" path="res://Assets/Fonts/computer_pixel-7.ttf" id="3_bfgci"]
 [ext_resource type="Script" path="res://Scripts/Levels/Day/Screen.gd" id="3_qm615"]
 [ext_resource type="AudioStream" uid="uid://b884bcbqnt05f" path="res://Audio/keyboard3.wav" id="4_08f3f"]
@@ -14,6 +15,11 @@
 script = ExtResource("1_nf2ms")
 metadata/_edit_horizontal_guides_ = [583.0]
 metadata/_edit_vertical_guides_ = [730.0]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ygwpg")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

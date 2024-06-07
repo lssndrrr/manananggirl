@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dycs8qhssfp3p"]
+[gd_scene load_steps=5 format=3 uid="uid://dycs8qhssfp3p"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_1g6sa"]
+[ext_resource type="FontFile" uid="uid://djouvuhmgxkgl" path="res://Assets/Fonts/computer_pixel-7.ttf" id="1_gcyep"]
 [ext_resource type="AudioStream" uid="uid://c46l6uwmtk6k" path="res://Audio/mainMenu.mp3" id="2_ipgra"]
+
+[sub_resource type="Theme" id="Theme_omfym"]
+default_font = ExtResource("1_gcyep")
+/colors/button = Color(0.592157, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,6 +17,7 @@ offset_right = -640.0
 offset_bottom = -360.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_omfym")
 script = ExtResource("1_1g6sa")
 metadata/_edit_vertical_guides_ = [320.0]
 metadata/_edit_horizontal_guides_ = [180.0]
