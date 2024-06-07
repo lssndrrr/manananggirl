@@ -352,7 +352,16 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Night3_camera" type="Camera2D" parent="."]
-position = Vector2(708, 374)
+position = Vector2(1404, 780)
+zoom = Vector2(1.7, 1.7)
+limit_left = 0
+limit_top = 28
+limit_right = 1278
+limit_bottom = 395
+limit_smoothed = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Wings" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("74_sc3sc")

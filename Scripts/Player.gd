@@ -13,7 +13,7 @@ func _ready():
 	wing_sfx.play()
 
 func _physics_process(_delta):
-	print(Global.current_scene + ": " + str(Global.fished) + ", " + str(Global.finished))
+	#print(Global.current_scene + ": " + str(Global.fished) + ", " + str(Global.finished))
 	if Global.fished && !Global.finished:
 		animate = true
 		

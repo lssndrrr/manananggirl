@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b3yujb5wks88r" path="res://Scenes/Interaction/InteractionArea.tscn" id="6_rjarr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqx0q"]
-size = Vector2(55, 542.5)
+size = Vector2(58, 542.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dl61"]
 size = Vector2(399, 413.5)
@@ -38,9 +38,9 @@ polygon = PackedVector2Array(-1, -5, 1315, -8, 1314, 539, 18, 535, -12, -7, -61,
 collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
-position = Vector2(1291.5, 264.75)
+position = Vector2(1290, 264.75)
 shape = SubResource("RectangleShape2D_dqx0q")
-debug_color = Color(0.454198, 0.556402, 0.584676, 0.42)
+debug_color = Color(0.971901, 0.0903849, 0.361406, 0.42)
 
 [node name="InteractionArea" parent="." instance=ExtResource("6_rjarr")]
 position = Vector2(695, 133)
