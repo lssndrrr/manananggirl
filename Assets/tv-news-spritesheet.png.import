@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf3kyge03yoa6"
-path="res://.godot/imported/MainTileset.png-66be029fc78ee21978fcf94369291238.ctex"
+uid="uid://dn00hi2jyy35j"
+path="res://.godot/imported/tv-news-spritesheet.png-4a395a9594fe4199708dafe5f30a7fbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/MainTileset.png"
-dest_files=["res://.godot/imported/MainTileset.png-66be029fc78ee21978fcf94369291238.ctex"]
+source_file="res://Assets/tv-news-spritesheet.png"
+dest_files=["res://.godot/imported/tv-news-spritesheet.png-4a395a9594fe4199708dafe5f30a7fbb.ctex"]
 
 [params]
 
