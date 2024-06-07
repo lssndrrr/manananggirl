@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cd8u8crf2llxd"]
+[gd_scene load_steps=10 format=3 uid="uid://cd8u8crf2llxd"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day/Day.gd" id="1_nf2ms"]
 [ext_resource type="AudioStream" uid="uid://csmtsqa0vklr3" path="res://Audio/keyboard1.mp3" id="2_btsyh"]
@@ -9,9 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://dxckhoi8obc5e" path="res://Audio/keyboard3.wav" id="4_08f3f"]
 [ext_resource type="AudioStream" uid="uid://r8wmts1ph4sw" path="res://Audio/keyboard4.mp3" id="5_c1rtq"]
 [ext_resource type="AudioStream" uid="uid://ix6jdxax71j2" path="res://Audio/wrong-key.mp3" id="6_ltmqe"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_xhao6"]
-resource_local_to_scene = true
 
 [node name="Day1" type="Node2D"]
 script = ExtResource("1_nf2ms")
@@ -60,16 +57,3 @@ theme_override_fonts/normal_font = ExtResource("3_bfgci")
 theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 script = ExtResource("3_qm615")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 226.0
-offset_top = 116.0
-offset_right = 417.0
-offset_bottom = 244.0
-label_settings = SubResource("LabelSettings_xhao6")
-
-[node name="Timer" type="Timer" parent="Label"]
-wait_time = 30.0
-autostart = true
-
-[connection signal="timeout" from="Label/Timer" to="." method="_on_timer_timeout"]

@@ -25,7 +25,9 @@ func _process(_delta):
 
 func change_scene2():
 	if Global.score >= Global.quota:
-		Global.win()
+		if Global.difficulty == 5:
+			Global.win()
+		Global.difficulty +=1
 	elif Global.transition_scene == true && Global.fished == true && Global.score < Global.quota:
 		if (Global.current_scene == "Night2"):
 			Global.finish_changeScenes()

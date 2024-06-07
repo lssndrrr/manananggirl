@@ -57,6 +57,9 @@ func _unhandled_input(event:InputEvent) -> void:
 					print("here")
 				else:
 					wrongkey.play()
+					Global.lives -=1
+					if Global.lives <= 0:
+						Global.lose()
 					print("wrong key typed: ", key_typed, next_char)
 
 func _process(delta):

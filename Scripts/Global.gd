@@ -4,6 +4,7 @@ extends Node
 var quota = 3
 var time = 300.0 #in seconds
 var difficulty = 1 # 1 - easy; 2 -n medium; 3 - hard; 4 - impossible; 5 - seriously
+var lives = 3
 
 # Global variables
 var score = 0
