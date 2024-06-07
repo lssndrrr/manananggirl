@@ -7,28 +7,25 @@
 
 [node name="Day1" type="Node2D"]
 script = ExtResource("1_nf2ms")
+metadata/_edit_horizontal_guides_ = [583.0]
+metadata/_edit_vertical_guides_ = [730.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 543.0
-offset_bottom = 326.0
+offset_left = 38.0
+offset_top = -21.0
+offset_right = 1444.0
+offset_bottom = 920.0
 scale = Vector2(1.32529, 1.14332)
 texture = ExtResource("2_gkb1q")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="Screen" type="RichTextLabel" parent="."]
-anchors_preset = -1
-anchor_left = 0.088
-anchor_top = 0.127
-anchor_right = 0.088
-anchor_bottom = 0.127
-offset_left = 49.625
-offset_top = 39.705
-offset_right = 590.0
-offset_bottom = 260.715
+offset_left = 221.0
+offset_top = 128.0
+offset_right = 1699.0
+offset_bottom = 738.0
 theme_override_fonts/normal_font = ExtResource("3_bfgci")
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 script = ExtResource("3_qm615")
