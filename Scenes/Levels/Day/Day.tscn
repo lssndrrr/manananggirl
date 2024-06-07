@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd8u8crf2llxd"]
+[gd_scene load_steps=11 format=3 uid="uid://cd8u8crf2llxd"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day/Day.gd" id="1_nf2ms"]
+[ext_resource type="AudioStream" uid="uid://csmtsqa0vklr3" path="res://Audio/keyboard1.mp3" id="2_btsyh"]
 [ext_resource type="Texture2D" uid="uid://fjhlnjovxfag" path="res://Assets/computer-screen-wide.png" id="2_gkb1q"]
 [ext_resource type="FontFile" uid="uid://djouvuhmgxkgl" path="res://Assets/Fonts/computer_pixel-7.ttf" id="3_bfgci"]
 [ext_resource type="Script" path="res://Scripts/Levels/Day/Screen.gd" id="3_qm615"]
+[ext_resource type="AudioStream" uid="uid://dlv7ehj02t7d5" path="res://Audio/keyboard2.mp3" id="3_t3nk4"]
+[ext_resource type="AudioStream" uid="uid://dxckhoi8obc5e" path="res://Audio/keyboard3.wav" id="4_08f3f"]
+[ext_resource type="AudioStream" uid="uid://r8wmts1ph4sw" path="res://Audio/keyboard4.mp3" id="5_c1rtq"]
+[ext_resource type="AudioStream" uid="uid://ix6jdxax71j2" path="res://Audio/wrong-key.mp3" id="6_ltmqe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xhao6"]
 resource_local_to_scene = true
@@ -12,6 +17,29 @@ resource_local_to_scene = true
 script = ExtResource("1_nf2ms")
 metadata/_edit_horizontal_guides_ = [583.0]
 metadata/_edit_vertical_guides_ = [730.0]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="keeb1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(226, 116)
+stream = ExtResource("2_btsyh")
+
+[node name="keeb2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(226, 116)
+stream = ExtResource("3_t3nk4")
+
+[node name="keeb3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(226, 116)
+stream = ExtResource("4_08f3f")
+area_mask = 3
+
+[node name="keeb4" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(226, 116)
+stream = ExtResource("5_c1rtq")
+
+[node name="wrongkey" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(226, 116)
+stream = ExtResource("6_ltmqe")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 38.0

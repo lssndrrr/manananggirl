@@ -3,7 +3,9 @@ extends Node2D
 @onready var current_line = null
 @onready var current_letter_index: int = -1
 @onready var lines_typed: int = 0
-
+@onready var keebsounds = [$keeb1, $keeb2, $keeb3, $keeb4]
+@onready var wrongkey = $wrongkey
+var current_sound_index = -1  # Start with an invalid index
 var timer_duration = 10.0
 var time_left = timer_duration
 
@@ -44,19 +46,29 @@ func _unhandled_input(event:InputEvent) -> void:
 			else:
 				var next_char = current_line.substr(current_letter_index, 1)
 				if next_char == key_typed:
+					play_random_sound()
 					print("you typed: ", key_typed, " ", current_letter_index, "/", current_line.length())
 					current_letter_index += 1
 					$Screen.get_colored_text(current_letter_index, current_line)
 					if current_letter_index == current_line.length():
 						current_letter_index = -1
 						new_line()
-				elif key_typed in [KEY_SHIFT]:
-					pass
+				elif typed_event.keycode == KEY_SHIFT:
+					print("here")
 				else:
+					wrongkey.play()
 					print("wrong key typed: ", key_typed, next_char)
 
 func _process(delta):
 	pass
+	
+func play_random_sound():
+	var new_sound_index = randi() % keebsounds.size()
+	while new_sound_index == current_sound_index:
+		new_sound_index = randi() % keebsounds.size()
+
+	current_sound_index = new_sound_index
+	keebsounds[current_sound_index].play()
 
 
 func _on_timer_timeout():
