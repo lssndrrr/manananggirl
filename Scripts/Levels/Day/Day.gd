@@ -4,9 +4,13 @@ extends Node2D
 @onready var current_letter_index: int = -1
 @onready var lines_typed: int = 0
 
+var timer_duration = 10.0
+var time_left = timer_duration
+
 func _ready():
 	Global.state = "Day"
 	Music.music()
+	
 	
 	$Screen.choose_random_lines()
 	new_line()
@@ -46,8 +50,18 @@ func _unhandled_input(event:InputEvent) -> void:
 					if current_letter_index == current_line.length():
 						current_letter_index = -1
 						new_line()
+				elif key_typed in [KEY_SHIFT]:
+					pass
 				else:
 					print("wrong key typed: ", key_typed, next_char)
 
 func _process(delta):
 	pass
+
+
+func _on_timer_timeout():
+	pass # lose
+	update_timer_label()
+
+func update_timer_label():
+	$Label.text = "Time Left: " + str(time_left)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkfl2w6qosin7"]
+[gd_scene load_steps=4 format=3 uid="uid://cee22f61kle7s"]
 
 [ext_resource type="AudioStream" uid="uid://cq7f7kmj5ufvg" path="res://Audio/night.mp3" id="1_ityrf"]
 [ext_resource type="Script" path="res://Scripts/Music.gd" id="1_o8mu3"]
