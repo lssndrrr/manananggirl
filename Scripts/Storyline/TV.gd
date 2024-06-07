@@ -10,3 +10,6 @@ func _process(delta):
 
 func _on_skip_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Levels/Day/Day.tscn")
+
+func _on_animated_sprite_2d_animation_finished():
+	get_tree().change_scene_to_file("res://Scenes/Levels/Day/Day.tscn")

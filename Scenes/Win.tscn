@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://eer4w1s2qayw"]
+[gd_scene load_steps=3 format=3 uid="uid://dqwao2ro77h04"]
 
 [ext_resource type="Script" path="res://Scripts/Win.gd" id="1_ybfnu"]
 [ext_resource type="FontFile" uid="uid://djouvuhmgxkgl" path="res://Assets/Fonts/computer_pixel-7.ttf" id="2_dv0j8"]

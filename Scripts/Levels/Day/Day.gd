@@ -17,7 +17,6 @@ func _ready():
 	timer.wait_time = 0.5 # Delay in seconds
 	timer.one_shot = true # Timer will stop after timeout
 	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
-
 	
 	update_label()
 	$Screen.choose_random_lines()
