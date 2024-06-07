@@ -10,17 +10,22 @@ script = ExtResource("1_b44wn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 900.0
-offset_right = 1054.0
-offset_bottom = 66.0
+offset_left = 810.0
+offset_top = 700.0
+offset_right = 1110.0
+offset_bottom = 766.0
 alignment = 1
 
 [node name="Restart" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8jfx4")
+theme_override_font_sizes/font_size = 50
 text = "Restart"
 
 [node name="MainMenu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8jfx4")
+theme_override_font_sizes/font_size = 50
 text = "Quit to Main Menu"
 
 [node name="Label" type="Label" parent="."]
@@ -28,15 +33,14 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 426.0
-offset_top = -59.0
-offset_right = 1626.0
-offset_bottom = 441.0
+offset_left = 90.0
+offset_right = 1890.0
+offset_bottom = 751.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.67451, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_8jfx4")
-theme_override_font_sizes/font_size = 500
+theme_override_font_sizes/font_size = 750
 text = "DEFEAT"
 horizontal_alignment = 1
 vertical_alignment = 1
